@@ -4,23 +4,20 @@
     <main>
         <div class="jumbo">
             <div class="container">
-                <button>current series</button>
+                <button>Comic info</button>
             </div>
         </div>
-        <div class="main-content">
-            <div class="container">
-                <div class="cards">
-                    @foreach ($comics as $comic)
-                        <div class="carta">
-                            <img src="{{ $comic['thumb'] }}" :alt="" />
-                            <h5>{{ $comic['series'] }}</h5>
-                            @if ($loop->first)
-                                <a href="/info">Info</a>
-                            @endif
-                        </div>
-                    @endforeach
+        <div class="container-small">
+            <div class="info-single">
+                <div class="info-left">
+                    <h2>{{ $comics[0]['title'] }}}</h2>
+                    <p>{{ $comics[0]['description'] }}</p>
+                    <p><strong>Series:</strong> {{ $comics[0]['series'] }}</p>
+                    <h3>{{ $comics[0]['price'] }}</h3>
                 </div>
-                <button>load more</button>
+                <div class="info-right">
+                    <img src="{{ $comics[0]['thumb'] }}" :alt="" />
+                </div>
             </div>
         </div>
         <div class="blue-component">

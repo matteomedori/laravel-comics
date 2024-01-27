@@ -118,6 +118,7 @@ header {
 
             .carta {
                 width: calc((100% - 125px) / 6);
+                text-align: left;
 
                 img {
                     width: 100%;
@@ -128,7 +129,6 @@ header {
 
                 h5 {
                     margin-top: 20px;
-                    text-align: left;
                     font-weight: 400;
                     font-size: 16px;
                     text-transform: uppercase;
@@ -219,6 +219,28 @@ header {
             font-weight: 700;
             font-size: 21px;
             letter-spacing: -2px;
+        }
+    }
+}
+
+.container-small {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.info-single {
+    display: flex;
+    margin: 50px 0;
+
+    .info-left {
+        width: 70%;
+    }
+
+    .info-right {
+        flex-grow: 1;
+
+        img {
+            max-width: 100%;
         }
     }
 }
