@@ -8,6 +8,11 @@ ul {
 a {
     text-decoration: none;
 }
+
+img {
+    display: block;
+}
+
 header {
     ul {
         gap: 30px;
@@ -40,8 +45,108 @@ header {
     }
 }
 
-img {
-    display: block;
+.jumbo {
+    height: 400px;
+    background-image: url("../img/jumbotron.jpg");
+    background-repeat: repeat;
+
+    .container {
+        position: relative;
+        height: 100%;
+
+        button {
+            all: unset;
+            padding: 15px 30px;
+            background-color: #0282f9;
+            color: white;
+            font-weight: 700;
+            font-size: 28px;
+            position: absolute;
+            bottom: -27px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.blue-component {
+    background-color: #0282f9;
+    position: relative;
+    z-index: 1;
+
+    ul {
+        display: flex;
+        color: white;
+        justify-content: space-around;
+        padding: 50px 45px;
+        margin-bottom: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            a {
+                text-transform: uppercase;
+                color: white;
+                font-size: 14px;
+            }
+
+            img {
+                height: 55px;
+            }
+        }
+
+        li:last-of-type img {
+            height: 35px;
+        }
+    }
+}
+
+.main-content {
+    color: white;
+    background-color: black;
+
+    .container {
+        text-align: center;
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            row-gap: 50px;
+            padding: 55px 0 50px 0;
+
+            .carta {
+                width: calc((100% - 125px) / 6);
+
+                img {
+                    width: 100%;
+                    max-height: 190px;
+                    object-fit: cover;
+                    object-position: top;
+                }
+
+                h5 {
+                    margin-top: 20px;
+                    text-align: left;
+                    font-weight: 400;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        button {
+            all: unset;
+            background-color: #0282f9;
+            padding: 10px 60px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            color: white;
+            text-transform: uppercase;
+        }
+    }
 }
 
 .footer-up {
@@ -95,10 +200,11 @@ img {
 
         button {
             padding: 15px;
-            border: 2px solid lightblue;
+            border: 2px solid #0282f9;
             color: white;
             font-weight: 600;
             background-color: inherit;
+            text-transform: uppercase;
         }
     }
 
@@ -108,7 +214,7 @@ img {
         gap: 20px;
 
         li:first-child {
-            color: lightblue;
+            color: #0282f9;
             text-transform: uppercase;
             font-weight: 700;
             font-size: 21px;

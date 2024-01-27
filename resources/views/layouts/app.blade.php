@@ -10,7 +10,7 @@
 
 <body>
     @include('shared.header')
-    <main>main</main>
+    @yield('main')
     @include('shared.footer')
 </body>
 
