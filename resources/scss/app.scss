@@ -1,21 +1,16 @@
+@use "partials/reset" as *;
+@use "partials/variables" as *;
+
 @import "~bootstrap/scss/bootstrap";
 
-ul {
-    list-style-type: none;
-    padding-inline-start: 0;
-}
-
-a {
-    text-decoration: none;
-}
-
-img {
-    display: block;
-}
+// ------------
+// header
+// ------------
 
 header {
     ul {
         gap: 30px;
+        margin-block-end: 0;
 
         li {
             cursor: pointer;
@@ -31,11 +26,11 @@ header {
         }
 
         li:hover a {
-            color: red;
+            color: $primary-blue;
         }
 
         li:hover {
-            border-color: red;
+            border-color: $primary-blue;
         }
     }
 
@@ -45,19 +40,22 @@ header {
     }
 }
 
+// ------------
+// main
+// ------------
+
 .jumbo {
     height: 400px;
     background-image: url("../img/jumbotron.jpg");
     background-repeat: repeat;
 
     .container {
-        position: relative;
         height: 100%;
 
         button {
             all: unset;
             padding: 15px 30px;
-            background-color: #0282f9;
+            background-color: $primary-blue;
             color: white;
             font-weight: 700;
             font-size: 28px;
@@ -69,14 +67,11 @@ header {
 }
 
 .blue-component {
-    background-color: #0282f9;
-    position: relative;
+    background-color: $primary-blue;
     z-index: 1;
 
     ul {
-        display: flex;
         color: white;
-        justify-content: space-around;
         padding: 50px 45px;
         margin-bottom: 0;
 
@@ -104,21 +99,16 @@ header {
 
 .main-content {
     color: white;
-    background-color: black;
+    background-color: $cards-bg;
 
     .container {
-        text-align: center;
-
         .cards {
-            display: flex;
-            flex-wrap: wrap;
             gap: 25px;
             row-gap: 50px;
             padding: 55px 0 50px 0;
 
             .carta {
                 width: calc((100% - 125px) / 6);
-                text-align: left;
 
                 img {
                     width: 100%;
@@ -131,14 +121,13 @@ header {
                     margin-top: 20px;
                     font-weight: 400;
                     font-size: 16px;
-                    text-transform: uppercase;
                 }
             }
         }
 
         button {
             all: unset;
-            background-color: #0282f9;
+            background-color: $primary-blue;
             padding: 10px 60px;
             margin-bottom: 20px;
             font-weight: 600;
@@ -149,16 +138,19 @@ header {
     }
 }
 
+// ------------
+// footer
+// ------------
+
+// ------------
+// footer up
+// ------------
+
 .footer-up {
     background-image: url(../img/footer-bg.jpg);
     color: white;
     .container {
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-
         .left {
-            display: flex;
             padding: 40px 0 60px 0;
 
             .col {
@@ -180,41 +172,35 @@ header {
         }
 
         img {
-            overflow: hidden;
-            position: absolute;
             right: 0;
             top: -100px;
         }
     }
 }
 
+// ------------
+// footer down
+// ------------
+
 .footer-down {
-    background-color: #303030;
+    background-color: $footer-bg;
     padding: 30px 0;
-    position: relative;
 
     .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
         button {
             padding: 15px;
-            border: 2px solid #0282f9;
+            border: 2px solid $primary-blue;
             color: white;
             font-weight: 600;
             background-color: inherit;
-            text-transform: uppercase;
         }
     }
 
     ul {
-        display: flex;
-        align-items: center;
         gap: 20px;
 
         li:first-child {
-            color: #0282f9;
+            color: $primary-blue;
             text-transform: uppercase;
             font-weight: 700;
             font-size: 21px;
@@ -223,24 +209,18 @@ header {
     }
 }
 
+// ------------
+// page info
+// ------------
 .container-small {
     max-width: 900px;
     margin: 0 auto;
-}
 
-.info-single {
-    display: flex;
-    margin: 50px 0;
+    .info-single {
+        margin: 50px 0;
 
-    .info-left {
-        width: 70%;
-    }
-
-    .info-right {
-        flex-grow: 1;
-
-        img {
-            max-width: 100%;
+        .info-left {
+            padding-right: 30px;
         }
     }
 }

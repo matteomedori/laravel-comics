@@ -3,17 +3,17 @@
 @section('main')
     <main>
         <div class="jumbo">
-            <div class="container">
+            <div class="container position-relative">
                 <button>current series</button>
             </div>
         </div>
         <div class="main-content">
-            <div class="container">
-                <div class="cards">
+            <div class="container text-center">
+                <div class="cards d-flex flex-wrap">
                     @foreach ($comics as $comic)
-                        <div class="carta">
+                        <div class="carta text-start">
                             <img src="{{ $comic['thumb'] }}" :alt="" />
-                            <h5>{{ $comic['series'] }}</h5>
+                            <h5 class="text-uppercase">{{ $comic['series'] }}</h5>
                             @if ($loop->first)
                                 <a href="/info">Info</a>
                             @endif
@@ -23,8 +23,8 @@
                 <button>load more</button>
             </div>
         </div>
-        <div class="blue-component">
-            <ul>
+        <div class="blue-component position-relative">
+            <ul class="d-flex justify-content-around">
                 <li>
                     <img src="{{ Vite::asset('resources/img/buy-comics-digital-comics.png') }}" alt="" />
                     <a href="#">digital comics</a>

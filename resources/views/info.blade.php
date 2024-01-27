@@ -3,25 +3,25 @@
 @section('main')
     <main>
         <div class="jumbo">
-            <div class="container">
-                <button>Comic info</button>
+            <div class="container position-relative">
+                <button>current series</button>
             </div>
         </div>
         <div class="container-small">
-            <div class="info-single">
-                <div class="info-left">
+            <div class="info-single d-flex">
+                <div class="info-left w-75">
                     <h2>{{ $comics[0]['title'] }}}</h2>
                     <p>{{ $comics[0]['description'] }}</p>
                     <p><strong>Series:</strong> {{ $comics[0]['series'] }}</p>
                     <h3>{{ $comics[0]['price'] }}</h3>
                 </div>
-                <div class="info-right">
-                    <img src="{{ $comics[0]['thumb'] }}" :alt="" />
+                <div class="info-right flex-grow-1">
+                    <img src="{{ $comics[0]['thumb'] }}" :alt="" class="img-fluid" />
                 </div>
             </div>
         </div>
-        <div class="blue-component">
-            <ul>
+        <div class="blue-component position-relative">
+            <ul class="d-flex justify-content-around">
                 <li>
                     <img src="{{ Vite::asset('resources/img/buy-comics-digital-comics.png') }}" alt="" />
                     <a href="#">digital comics</a>
